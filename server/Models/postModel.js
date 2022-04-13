@@ -1,17 +1,23 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "./index.js";
 
-const User =  sequelize.define('user',{
-    email:{
+const Post =  sequelize.define('post',{
+    title:{
         type:DataTypes.STRING,
         allowNull:false
     },
-    password:{
+    body:{
         type:DataTypes.STRING,
         allowNull:false
     },
+    uid:{
+        type:DataTypes.INTEGER,
+        allowNull:false
+    }
 },{
     timestamps:true,
 },)
 
-export default User;
+await Post.sync();
+
+export default Post;

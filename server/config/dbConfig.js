@@ -1,7 +1,7 @@
  const dbConfig = {
     HOST:'localhost',
     USER:'root',
-    DB:'aranwa',
+    DB:'sequelize',
     PASSWORD:'',
     dialect:'mysql',
     pool:{

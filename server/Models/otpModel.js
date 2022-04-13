@@ -1,17 +1,18 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "./index.js";
 
-const User =  sequelize.define('user',{
-    email:{
-        type:DataTypes.STRING,
+const OTP = sequelize.define("OTP",{
+    uid:{
+        type: DataTypes.INTEGER,
         allowNull:false
     },
-    password:{
+    opt_secret:{
         type:DataTypes.STRING,
         allowNull:false
     },
 },{
     timestamps:true,
-},)
+}
+)
 
-export default User;
+export default OTP;
